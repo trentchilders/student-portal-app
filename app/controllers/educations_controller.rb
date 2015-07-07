@@ -16,6 +16,7 @@ class EducationsController < ApplicationController
   end
 
   def update
+    Unirest.patch("http://localhost:3000/students.json", headers:{ "Accept" => "application/json" }, parameters:{ start_date: params[:start_date], end_date: params[:end_date], degree: params[:degree], university_name: params[:university_name], details: params[:details]}).body
   end
 
   def destroy
