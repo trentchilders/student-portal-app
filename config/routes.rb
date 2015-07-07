@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   patch     "/education/:edit"      => 'educations#update'
   delete    "/education/:id"        => 'educations#destroy'
 
+
 end
