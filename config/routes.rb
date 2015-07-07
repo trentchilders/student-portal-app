@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: "users#index"
 
   get 'students' => 'attributes#index'
+  get '/students/:id' => 'attributes#show'
   get '/experiences/new'
   get '/experiences/edit/:id' => 'experiences#edit'
   patch '/experiences' => 'experiences#update'
