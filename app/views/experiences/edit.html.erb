@@ -1,0 +1,32 @@
+<h1> Edit your Experience </h1>
+
+<%= form_tag '/expereriences', method: :patch %>
+
+<div>
+<%= text_field_tag :start_date %>
+<%= label_tag :start_date %>
+</div>
+
+<div>
+<%= text_field_tag :end_date %>
+<%= label_tag :end_date %>
+</div>
+
+<div>
+<%= text_field_tag :job_title %>
+<%= label_tag :job_title %>
+</div>
+
+<div>
+<%= text_field_tag :company_name %>
+<%= label_tag :company_name %>
+</div>
+
+<div>
+<%= text_field_tag :details %>
+<%= label_tag :details %>
+</div>
+
+<div>
+<%= submit_tag 'Submit' %>
+</div>
