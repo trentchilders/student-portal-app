@@ -1,0 +1,13 @@
+<h1>Edit your skills</h1>
+
+
+<%= form_tag '/skills/#{@user.id}', method: :patch do %>
+  <div>
+    <%= label_tag :skill_name %>
+    <%= text_field_tag :skill_name %>
+  </div>
+
+
+  <%= submit_tag "Edit Skill" %>
+
+<% end %>
