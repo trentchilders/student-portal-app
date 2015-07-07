@@ -1,6 +1,6 @@
 class Student
 
-attr_accessor :first_name, :last_name, :id
+attr_accessor :first_name, :last_name, :id, :email, :phone_number, :short_bio, :linkedin, :twitter, :blog_site, :resume, :github, :photo
 
   def initialize(hash)
       @first_name = hash["first_name"]
