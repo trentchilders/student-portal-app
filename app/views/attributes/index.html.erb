@@ -1,1 +1,7 @@
 <h1>A Secret Index of All Users</h1>
+
+<% @student_attributes.each do |student| %>
+  <p><%= student.first_name %> <%= student.last_name %></p>
+  <p><%= link_to "Details", "/students/#{student.id}"%></p>
+  <br>
+<% end %>
