@@ -4,8 +4,4 @@ class AttributesController < ApplicationController
     @student_attributes = Attribute.all
 
   end
-
-
-
-
 end
