@@ -1,1 +1,28 @@
 <h1>New page on Education</h1>
+
+
+<%= form_tag '/education', method: :post do %>
+  <div>
+    <%= label_tag :start_date %>
+    <%= text_field_tag :start_date %>
+  </div>
+  <div>
+    <%= label_tag :end_date %> 
+    <%= text_field_tag :end_date %>
+  </div>
+  <div>
+    <%= label_tag :degree %>
+    <%= text_field_tag :degree %>
+  </div>
+  <div>
+    <%= label_tag :university_name %>
+    <%= text_field_tag :university_name %>
+  </div>
+  <div>
+    <%= label_tag :details %>
+    <%= text_field_tag :details %>
+  </div>
+
+  <%= submit_tag "Add New Education" %>
+
+<% end %>
