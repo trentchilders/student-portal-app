@@ -9,7 +9,7 @@ class AttributesController < ApplicationController
   end
 
   def show
-    @student_attribute = Attribute.find_by(params[:id])
+    @student_attribute = Student.new(Unirest.get("http://localhost:3000/students/#{params[:id]}.json").body)
 
   end
 
