@@ -1,6 +1,6 @@
 <h1>Edit for Education</h1>
 
-<%= form_tag '/education#{@user.id}', method: :patch do %>
+<%= form_tag '/education/#{@user.id}', method: :patch do %>
   <div>
     <%= label_tag :start_date %>
     <%= text_field_tag :start_date %>
