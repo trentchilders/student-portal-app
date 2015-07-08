@@ -23,7 +23,7 @@
   <p>Name: <%= capstone.name %></p>
   <p>Description: <%= capstone.description %></p>
   <p>URL: <%= link_to "#{capstone.url}", "#{capstone.url}" %></p>
-  <p>Screenshot: <%= capstone.screenshot %></p>
+  <p>Screenshot: <%= image_tag "#{capstone.screenshot}", title: "Capstone Screenshot" %></p>
 <% end %>
 
 <br>
