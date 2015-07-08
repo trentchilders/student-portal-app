@@ -16,6 +16,15 @@
 
 <br>
 <h3>Capstones</h3>
+<% counter = 0 %>
+<% @capstone_array.each do |capstone| %>
+  <% counter += 1 %>
+  <h4>Capstone <%= counter %></h4>
+  <p>Name: <%= capstone.name %></p>
+  <p>Description: <%= capstone.description %></p>
+  <p>URL: <%= link_to "#{capstone.url}", "#{capstone.url}" %></p>
+  <p>Screenshot: <%= capstone.screenshot %></p>
+<% end %>
 
 <br>
 <h3>Education</h3>
@@ -33,6 +42,16 @@
 
 <br>
 <h3>Experience</h3>
+<% counter = 0 %>
+<% @experience_array.each do |experience| %>
+  <% counter += 1 %>
+  <h4>Experience <%= counter %></h4>
+  <p>Start Date: <%= experience.start_date %></p>
+  <p>End Date: <%= experience.end_date %></p>
+  <p>Details: <%= experience.details %></p>
+  <p>Job Title: <%= experience.job_title %></p>
+  <br>
+<% end %>
 
 
 <br>
