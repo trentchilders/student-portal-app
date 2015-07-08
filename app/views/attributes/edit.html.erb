@@ -1,0 +1,63 @@
+<h1> Edit your Attributes </h1>
+
+<%= form_tag "/attributes/#{@student.id}", method: :patch do %>
+
+<div>
+<%= label_tag :first_name  %>
+<%= text_field_tag :first_name, @student.first_name%>
+</div>
+
+<div>
+<%= label_tag :last_name %>
+<%= text_field_tag :last_name, @student.last_name %>
+</div>
+
+<div>
+<%= label_tag :email %>
+<%= text_field_tag :email, @student.email %>
+</div>
+
+<div>
+<%= label_tag :phone_number %>
+<%= text_field_tag :phone_number, @student.phone_number %>
+</div>
+
+<div>
+<%= label_tag :short_bio %>
+<%= text_field_tag :short_bio, @student.short_bio %>
+</div>
+
+<div>
+<%= label_tag :linkedin %>
+<%= text_field_tag :linkedin, @student.linkedin %>
+</div>
+
+<div>
+<%= label_tag :twitter %>
+<%= text_field_tag :twitter, @student.twitter %>
+</div>
+
+<div>
+<%= label_tag :blog_site %>
+<%= text_field_tag :blog_site, @student.blog_site %>
+</div>
+
+<div>
+<%= label_tag :resume %>
+<%= text_field_tag :resume, @student.resume %>
+</div>
+
+<div>
+<%= label_tag :github %>
+<%= text_field_tag :github, @student.github %>
+</div>
+
+<div>
+<%= label_tag :photo %>
+<%= text_field_tag :photo, @student.photo %>
+</div>
+
+<div>
+<%= submit_tag 'Submit' %>
+</div>
+<% end %>
