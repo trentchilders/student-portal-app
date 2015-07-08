@@ -29,6 +29,12 @@ class AttributesController < ApplicationController
       @capstone_array << Student.new(hash)
     end
 
+    @skill_array = []
+    skill_hashes = (Unirest.get("http://localhost:3000/students/#{params[:id]}.json").body)["skills"]
+    skill_hashes.each do |hash|
+      @skill_array << Student.new(hash)
+    end
+
   end
 
   def new
