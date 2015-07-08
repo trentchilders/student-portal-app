@@ -19,9 +19,21 @@
 
 <br>
 <h3>Education</h3>
+<% counter = 0 %>
+<% @education_array.each do |education| %>
+  <% counter += 1 %>
+  <h4>Education <%= counter %></h4>
+  <p>Start Date: <%= education.start_date %></p>
+  <p>End Date: <%= education.end_date %></p>
+  <p>Degree: <%= education.degree %></p>
+  <p>University Name: <%= education.university_name%></p>
+  <p>Details: <%= education.details %></p>
+  <br>
+<% end %>
 
 <br>
 <h3>Experience</h3>
+
 
 <br>
 <h3>Skills</h3>
