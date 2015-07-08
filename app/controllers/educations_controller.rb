@@ -3,7 +3,7 @@ class EducationsController < ApplicationController
   def index
     @educations = []
     education_hashes = Unirest.get("http://localhost:3000/students.json").body
-    education_hashes.educations.each do |hash|
+    education_hashes.each do |hash|
       @educations << Student.new(hash)
     end
   end
@@ -15,6 +15,11 @@ class EducationsController < ApplicationController
   end
 
   def show
+    @education_array = []
+    education_hashes = (Unirest.get("http://localhost:3000/students/#{params[:id]}.json").body)["educations"]
+    education_hashes.each do |hash|
+      @education_array << Student.new(hash)
+    end
   end
 
   def edit
