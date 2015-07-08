@@ -17,8 +17,9 @@ attr_accessor :first_name, :last_name, :id, :email, :phone_number, :short_bio, :
       @id = hash["id"]
   end
 
-
-
+  def self.find(id)
+    Student.new(Unirest.get("http://localhost:3000/students/#{id}.json").body)
+  end
 
 
 

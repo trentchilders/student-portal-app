@@ -3,18 +3,22 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "users#index"
 
-  get 'students' => 'attributes#index'
+
+  get '/students' => 'attributes#index'
   get '/students/:id' => 'attributes#show'
+  get '/students/:id/edit' => 'attributes#edit'
+  patch '/attributes/:id' => 'attributes#update'
+  
   get '/experiences/new'
-  get '/experiences/edit/:id' => 'experiences#edit'
-  patch '/experiences' => 'experiences#update'
+  get '/experiences/:id/edit' => 'experiences#edit'
+  patch '/experiences/:id' => 'experiences#update'
 
   get      "/education"          => 'educations#index'
   get      "/education/new"      => 'educations#new'
   post     "/education"          => 'educations#create'
   get      "/education/:id/edit" => 'educations#edit'
   get      "/education/:id"      => 'educations#show'
-  patch    "/education/:edit"    => 'educations#update'
+  patch    "/education/:id"    => 'educations#update'
   delete   "/education/:id"      => 'educations#destroy'
 
   get      "/skills"          => 'skills#index'
