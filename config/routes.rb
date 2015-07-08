@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/students/:id' => 'attributes#show'
   get '/students/:id/edit' => 'attributes#edit'
   patch '/attributes/:id' => 'attributes#update'
+  delete '/attributes/:id' => 'attributes#destroy'
   
   get '/experiences/new'
   get '/experiences/:id/edit' => 'experiences#edit'

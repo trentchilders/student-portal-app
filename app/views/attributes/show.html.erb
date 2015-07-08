@@ -14,6 +14,8 @@
 <p>Github: <%= @student_attribute.github %></p>
 <p>photo: <%= @student_attribute.photo %></p>
 
+<%= link_to "Delete", "/attributes/#{@student_attribute.id}", method: :delete %>
+
 <br>
 <h3>Capstones</h3>
 <% counter = 0 %>

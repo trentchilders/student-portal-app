@@ -32,7 +32,10 @@ attr_accessor :first_name, :last_name, :id, :email, :phone_number, :short_bio, :
     Student.new(Unirest.get("http://localhost:3000/students/#{id}.json").body)
   end
 
-
+  def destroy
+    Unirest.delete("http://localhost:3000/students/#{id}", 
+    headers:{ "Accept" => "application/json" }).body
+  end
 
 
 
