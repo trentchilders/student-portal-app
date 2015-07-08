@@ -1,6 +1,11 @@
 class EducationsController < ApplicationController
 
   def index
+    @educations = []
+    education_hashes = Unirest.get("http://localhost:3000/students.json").body
+    education_hashes.educations.each do |hash|
+      @educations << Student.new(hash)
+    end
   end
 
   def new
