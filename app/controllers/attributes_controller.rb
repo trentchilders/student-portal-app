@@ -16,6 +16,19 @@ class AttributesController < ApplicationController
     education_hashes.each do |hash|
       @education_array << Student.new(hash)
     end
+
+    @experience_array = []
+    experience_hashes = (Unirest.get("http://localhost:3000/students/#{params[:id]}.json").body)["experiences"]
+    experience_hashes.each do |hash|
+      @experience_array << Student.new(hash)
+    end
+
+    @capstone_array = []
+    capstone_hashes = (Unirest.get("http://localhost:3000/students/#{params[:id]}.json").body)["capstones"]
+    capstone_hashes.each do |hash|
+      @capstone_array << Student.new(hash)
+    end
+
   end
 
   def new
